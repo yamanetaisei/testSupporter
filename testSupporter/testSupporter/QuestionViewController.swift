@@ -28,15 +28,15 @@ class QuestionViewController:FormViewController{
                                 
                 $0.multivaluedRowToInsertAt = { index in
                     return NameRow() {
-                        $0.placeholder = "Tag Name"
+                        $0.placeholder = "問\(index + 1)"
                         print(index)
                     }
                 }
                 $0 <<< NameRow() {
-                    $0.placeholder = "Tag Name"
+                    $0.placeholder = "問１"
                 }
             }
         }
-    }
+}
 
 
