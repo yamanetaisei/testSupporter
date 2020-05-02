@@ -15,6 +15,9 @@ class QuestionViewController:FormViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let remind_vc = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        
         form +++
             MultivaluedSection(multivaluedOptions: [.Delete, .Insert ],header: "解答") { answer in
                 //sectionは回答欄を追加するrowの引数
@@ -40,7 +43,15 @@ class QuestionViewController:FormViewController{
                 }
             }
             +++ Section()
-            <<< ButtonRow()
+            <<< ButtonRow(){
+                $0.title = "採点を行う"
+                $0.presentationMode = .show(controllerProvider: ControllerProvider.callback(builder: {() in remind_vc}),
+                                            onDismiss:{ vc in
+//                                                print(vc)
+//                                                vc.present(remind_vc, animated: true, completion: nil)
+                                                
+                })
+            }
     }
 }
 
