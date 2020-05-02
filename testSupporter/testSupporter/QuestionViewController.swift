@@ -17,11 +17,13 @@ class QuestionViewController:FormViewController{
         
         form +++
             MultivaluedSection(multivaluedOptions: [.Delete, .Insert ],header: "解答") { answer in
-                
+                //sectionは回答欄を追加するrowの引数
                 answer.addButtonProvider = { section in
                     return ButtonRow(){
+                        //アイコンを消している
                         section.showInsertIconInAddButton = false
                         print(section)
+                        //$0はいったい何だろう
                         $0.title = "回答欄を追加"
                     }
                 }
@@ -38,7 +40,7 @@ class QuestionViewController:FormViewController{
                 }
             }
             +++ Section()
-            <<< ButtonRow("採点を行う")
+            <<< ButtonRow()
     }
 }
 
