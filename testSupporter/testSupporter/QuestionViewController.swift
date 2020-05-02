@@ -16,27 +16,30 @@ class QuestionViewController:FormViewController{
         super.viewDidLoad()
         
         form +++
-            MultivaluedSection(multivaluedOptions: [.Reorder, .Insert, ],
-                               header: "Multivalued TextField",
-                               footer: ".Insert adds a 'Add Item' (Add New Tag) button row as last cell.") {
-                //公式ドキュメントのコピペ
-                $0.addButtonProvider = { section in
+            MultivaluedSection(multivaluedOptions: [.Delete, .Insert ],header: "解答") { answer in
+                
+                answer.addButtonProvider = { section in
                     return ButtonRow(){
-                        $0.title = "Add New Tag"
+                        section.showInsertIconInAddButton = false
+                        print(section)
+                        $0.title = "回答欄を追加"
                     }
                 }
                                 
-                $0.multivaluedRowToInsertAt = { index in
-                    return NameRow() {
+                answer.multivaluedRowToInsertAt = { index in
+                    return NameRow(){
+                        answer.showInsertIconInAddButton = false
                         $0.placeholder = "問\(index + 1)"
                         print(index)
                     }
                 }
-                $0 <<< NameRow() {
+                answer <<< NameRow() {
                     $0.placeholder = "問１"
                 }
             }
-        }
+            +++ Section()
+            <<< ButtonRow("採点を行う")
+    }
 }
 
 
