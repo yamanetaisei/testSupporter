@@ -56,7 +56,7 @@
         <!--Result View Controller-->
         <scene sceneID="EQD-y6-UJQ">
             <objects>
-                <viewController storyboardIdentifier="ResultViewController" id="SDe-kb-hS1" customClass="ResultViewController" customModule="testSupporter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" modalPresentationStyle="fullScreen" id="SDe-kb-hS1" customClass="ResultViewController" customModule="testSupporter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="STn-Yy-c42">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

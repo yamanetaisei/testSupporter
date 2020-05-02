@@ -44,6 +44,9 @@ class QuestionViewController:FormViewController{
             }
             +++ Section()
             <<< ButtonRow(){
+                $0.onCellSelection(){_,_  in
+                    
+                }
                 $0.title = "採点を行う"
                 $0.presentationMode = .show(controllerProvider: ControllerProvider.callback(builder: {() in remind_vc}),
                                             onDismiss:{ vc in
