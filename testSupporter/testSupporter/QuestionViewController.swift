@@ -16,7 +16,7 @@ class QuestionViewController:FormViewController{
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let remind_vc = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        let remind_vc = storyboard.instantiateViewController(withIdentifier: "ScoringViewController") as! ScoringViewController
         
         form +++
             MultivaluedSection(multivaluedOptions: [.Delete, .Insert ],header: "解答") { answer in
