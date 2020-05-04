@@ -45,7 +45,8 @@ class QuestionViewController:FormViewController{
             <<< ButtonRow(){
                 $0.onCellSelection(){_,_  in
 //                    nilやらなんやらでアプリが落ちるポイント↓
-//                    let teamRow = self.form.rowBy(tag: "0") as! NameRow
+                    let teamRow = self.form.values()
+                    print(teamRow)
 //                    let name = teamRow.value!
                 }
                 $0.title = "採点を行う"
