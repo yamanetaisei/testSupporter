@@ -30,13 +30,13 @@ class QuestionViewController:FormViewController{
                 }
                                 
                 answer.multivaluedRowToInsertAt = { index in
-                    return NameRow(){
+                    return TextRow(){
                         answer.showInsertIconInAddButton = false
                         $0.tag = "\(index)"
                         $0.placeholder = "問\(index + 1)"
                     }
                 }
-                answer <<< NameRow() {
+                answer <<< TextRow() {
                     $0.tag = "0"
                     $0.placeholder = "問１"
                 }
