@@ -47,7 +47,7 @@ class QuestionViewController:FormViewController{
 //                    nilやらなんやらでアプリが落ちるポイント↓
                     let teamRow = self.form.values()
                     let answers = self.Sorting(baseArry: teamRow)
-//                    let name = teamRow.value!
+                    remind_vc.scoringAnswers = answers
                 }
                 $0.title = "採点を行う"
                 $0.presentationMode = .show(controllerProvider: ControllerProvider.callback(builder: {() in remind_vc}),

@@ -10,5 +10,11 @@ import Foundation
 import UIKit
 
 class ScoringViewController: UIViewController{
+    //入力された解答をココで受け取る
+    var scoringAnswers : Array<Any?> = []
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(scoringAnswers)
+    }
 }
