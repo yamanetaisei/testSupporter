@@ -8,13 +8,13 @@
 
 import Foundation
 import UIKit
+import Eureka
 
-class ScoringViewController: UIViewController{
+class ScoringViewController: FormViewController{
     //入力された解答をココで受け取る
     var scoringAnswers : Array<Any?> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(scoringAnswers)
     }
 }
