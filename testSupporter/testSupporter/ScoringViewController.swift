@@ -20,6 +20,7 @@ class ScoringViewController: FormViewController{
         form +++ SelectableSection<ListCheckRow<String?>>("採点", selectionType: .multipleSelection)
         for answers in scoringAnswers{
             form.last! <<< ListCheckRow<String?>(answers){ listRow in
+                listRow.title = answers
                 listRow.selectableValue = answers
             }
         }
