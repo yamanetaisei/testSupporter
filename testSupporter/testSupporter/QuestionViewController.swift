@@ -46,7 +46,7 @@ class QuestionViewController:FormViewController{
                 $0.onCellSelection(){_,_  in
 //                    nilやらなんやらでアプリが落ちるポイント↓
                     let teamRow = self.form.values()
-                    let answers = self.Sorting(baseArry: teamRow)
+                    let answers:[String?] = self.Sorting(baseArry: teamRow)
                     remind_vc.scoringAnswers = answers
                 }
                 $0.title = "採点を行う"
@@ -60,12 +60,11 @@ class QuestionViewController:FormViewController{
     }
     
     //配列を並び替える関数
-    func Sorting(baseArry: [String : Any?]) -> [Any?] {
-        var result : Array<Any?> = []
+    func Sorting(baseArry: [String : Any?]) -> [String?] {
+        var result : Array<String?> = []
         for tag in 0..<baseArry.count{
             result.append(baseArry[String(tag)] as! String?)
         }
-        print(result)
         return result
     }
 }
