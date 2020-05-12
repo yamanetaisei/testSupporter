@@ -48,14 +48,9 @@ class QuestionViewController:FormViewController{
                     let teamRow = self.form.values()
                     let answers:[String?] = self.Sorting(baseArry: teamRow)
                     remind_vc.scoringAnswers = answers
+                    self.present(remind_vc, animated: true, completion: nil)
                 }
                 $0.title = "採点を行う"
-                $0.presentationMode = .show(controllerProvider: ControllerProvider.callback(builder: {() in remind_vc}),
-                                            onDismiss:{ vc in
-//                                                print(vc)
-//                                                vc.present(remind_vc, animated: true, completion: nil)
-                                      
-                })
             }
     }
     
