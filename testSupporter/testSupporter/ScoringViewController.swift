@@ -24,6 +24,10 @@ class ScoringViewController: FormViewController{
                 listRow.selectableValue = answers
             }
         }
+        form +++ Section()
+            <<< ButtonRow(){
+                $0.title = "採点を終わる"
+            }
     }
 }
 
