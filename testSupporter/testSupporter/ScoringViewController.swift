@@ -13,6 +13,9 @@ import Eureka
 class ScoringViewController: FormViewController{
     //入力された解答をココで受け取る
     var scoringAnswers : Array<String?> = []
+    
+    var count:Int = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +24,20 @@ class ScoringViewController: FormViewController{
             form.last! <<< ListCheckRow<String?>(answers){ listRow in
                 listRow.title = answers
                 listRow.selectableValue = answers
+                listRow.onChange(){_ in
+                    if listRow.value != nil {
+                        self.count += 1
+                    }else{
+                        self.count -= 1
+                    }
+                }
             }
         }
         form +++ Section()
             <<< ButtonRow(){
                 $0.title = "採点を終わる"
                 $0.onCellSelection(){_,_ in
-                    
+                    print(self.count)
                 }
             }
     }
