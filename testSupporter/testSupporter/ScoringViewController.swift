@@ -16,7 +16,6 @@ class ScoringViewController: FormViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(scoringAnswers)
         form +++ SelectableSection<ListCheckRow<String?>>("採点", selectionType: .multipleSelection)
         for answers in scoringAnswers{
             form.last! <<< ListCheckRow<String?>(answers){ listRow in
@@ -27,6 +26,9 @@ class ScoringViewController: FormViewController{
         form +++ Section()
             <<< ButtonRow(){
                 $0.title = "採点を終わる"
+                $0.onCellSelection(){_,_ in
+                    
+                }
             }
     }
 }
