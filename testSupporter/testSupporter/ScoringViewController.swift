@@ -14,7 +14,7 @@ class ScoringViewController: FormViewController{
     //入力された解答をココで受け取る
     var scoringAnswers : Array<String?> = []
     var tagNumber : Int = 0
-    var count:Int = 0
+    var countCorrect:Int = 0
     
 
     override func viewDidLoad() {
@@ -27,9 +27,9 @@ class ScoringViewController: FormViewController{
                 listRow.selectableValue = answers
                 listRow.onChange(){_ in
                     if listRow.value != nil {
-                        self.count += 1
+                        self.countCorrect += 1
                     }else{
-                        self.count -= 1
+                        self.countCorrect -= 1
                     }
                 }
                 tagNumber += 1
@@ -39,9 +39,17 @@ class ScoringViewController: FormViewController{
             <<< ButtonRow(){
                 $0.title = "採点を終わる"
                 $0.onCellSelection(){_,_ in
-                    print(self.count)
+                    let score = self.Aggregate(correct: self.countCorrect, base: self.scoringAnswers)
+                    print(score)
                 }
             }
+    }
+    func Aggregate(correct:Int,base:[String?]) -> Int {
+        let correct = Double(correct)
+        let base = Double(base.count)
+        let score = correct/base*100
+        let finalScore = Int(score)
+        return finalScore
     }
 }
 
