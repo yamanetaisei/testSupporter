@@ -13,7 +13,7 @@ import Eureka
 class ScoringViewController: FormViewController{
     //入力された解答をココで受け取る
     var scoringAnswers : Array<String?> = []
-    
+    var tagNumber : Int = 0
     var count:Int = 0
     
 
@@ -23,6 +23,7 @@ class ScoringViewController: FormViewController{
         for answers in scoringAnswers{
             form.last! <<< ListCheckRow<String?>(answers){ listRow in
                 listRow.title = answers
+                listRow.tag = "\(tagNumber)"
                 listRow.selectableValue = answers
                 listRow.onChange(){_ in
                     if listRow.value != nil {
@@ -31,6 +32,7 @@ class ScoringViewController: FormViewController{
                         self.count -= 1
                     }
                 }
+                tagNumber += 1
             }
         }
         form +++ Section()
