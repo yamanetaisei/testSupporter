@@ -40,7 +40,9 @@ class ScoringViewController: FormViewController{
                 $0.title = "採点を終わる"
                 $0.onCellSelection(){_,_ in
                     let score = self.Aggregate(correct: self.countCorrect, base: self.scoringAnswers)
-                    print(score)
+                    let storyboard: UIStoryboard = self.storyboard!
+                    let second = storyboard.instantiateViewController(withIdentifier: "result")
+                    self.present(second, animated: true, completion: nil)
                 }
             }
     }

@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="2127" y="150"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Conrtroller-->
         <scene sceneID="7Eg-qC-Oyi">
             <objects>
-                <viewController id="GCR-YR-atW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" modalPresentationStyle="fullScreen" id="GCR-YR-atW" customClass="ResultViewConrtroller" customModule="testSupporter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlF-My-jUN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
