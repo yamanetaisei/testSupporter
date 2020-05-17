@@ -11,8 +11,15 @@ import UIKit
 
 class ResultViewConrtroller:UIViewController{
     
+    @IBOutlet weak var resultText: UILabel!
+    var result:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setText()
     }
     
+    func setText(){
+        resultText.text = "正答率は\(result)%です"
+    }
 }

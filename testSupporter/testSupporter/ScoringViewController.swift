@@ -41,7 +41,8 @@ class ScoringViewController: FormViewController{
                 $0.onCellSelection(){_,_ in
                     let score = self.Aggregate(correct: self.countCorrect, base: self.scoringAnswers)
                     let storyboard: UIStoryboard = self.storyboard!
-                    let second = storyboard.instantiateViewController(withIdentifier: "result")
+                    let second = storyboard.instantiateViewController(withIdentifier: "result") as! ResultViewConrtroller
+                    second.result = score
                     self.present(second, animated: true, completion: nil)
                 }
             }

@@ -75,13 +75,30 @@
                     <view key="view" contentMode="scaleToFill" id="BlF-My-jUN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8p-2V-K1Z">
+                                <rect key="frame" x="63" y="164" width="249" height="156"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vqN-bb-hag" firstAttribute="bottom" secondItem="W8p-2V-K1Z" secondAttribute="bottom" constant="458" id="5jQ-Bm-4qg"/>
+                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="centerX" secondItem="BlF-My-jUN" secondAttribute="centerX" id="6ws-S1-nUi"/>
+                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="top" secondItem="vqN-bb-hag" secondAttribute="top" constant="120" id="YJk-gf-5bz"/>
+                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="leading" secondItem="vqN-bb-hag" secondAttribute="leading" constant="63" id="baa-uC-Kkd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vqN-bb-hag"/>
                     </view>
+                    <connections>
+                        <outlet property="resultText" destination="W8p-2V-K1Z" id="MQr-4V-VwU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfr-nM-WJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3109" y="146"/>
+            <point key="canvasLocation" x="3108" y="145.56650246305421"/>
         </scene>
     </scenes>
 </document>
