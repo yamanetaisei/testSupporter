@@ -14,6 +14,9 @@ class ResultViewConrtroller:UIViewController{
     @IBOutlet weak var resultText: UILabel!
     var result:Int = 0
     
+    @IBAction func endButton(_ sender: Any) {
+        self.self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setText()

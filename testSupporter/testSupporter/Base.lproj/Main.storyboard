@@ -82,13 +82,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsF-p5-W1r">
+                                <rect key="frame" x="63" y="618" width="249" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="Kl5-h5-QxE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="完了"/>
+                                <connections>
+                                    <action selector="endButton:" destination="GCR-YR-atW" eventType="touchUpInside" id="yFD-1b-a3T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="vqN-bb-hag" firstAttribute="bottom" secondItem="W8p-2V-K1Z" secondAttribute="bottom" constant="458" id="5jQ-Bm-4qg"/>
-                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="centerX" secondItem="BlF-My-jUN" secondAttribute="centerX" id="6ws-S1-nUi"/>
-                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="top" secondItem="vqN-bb-hag" secondAttribute="top" constant="120" id="YJk-gf-5bz"/>
-                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="leading" secondItem="vqN-bb-hag" secondAttribute="leading" constant="63" id="baa-uC-Kkd"/>
+                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="top" secondItem="vqN-bb-hag" secondAttribute="top" constant="120" id="0uc-04-wSd"/>
+                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="centerX" secondItem="BlF-My-jUN" secondAttribute="centerX" id="8pr-9I-BJG"/>
+                            <constraint firstItem="W8p-2V-K1Z" firstAttribute="leading" secondItem="vqN-bb-hag" secondAttribute="leading" constant="63" id="H3Q-zy-pvc"/>
+                            <constraint firstItem="xsF-p5-W1r" firstAttribute="leading" secondItem="W8p-2V-K1Z" secondAttribute="leading" id="RZf-Uu-d7j"/>
+                            <constraint firstItem="vqN-bb-hag" firstAttribute="bottom" secondItem="W8p-2V-K1Z" secondAttribute="bottom" constant="458" id="VrV-s4-M2X"/>
+                            <constraint firstItem="xsF-p5-W1r" firstAttribute="trailing" secondItem="W8p-2V-K1Z" secondAttribute="trailing" id="ifw-3u-y21"/>
+                            <constraint firstItem="vqN-bb-hag" firstAttribute="bottom" secondItem="xsF-p5-W1r" secondAttribute="bottom" constant="64" id="qPa-41-lw4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vqN-bb-hag"/>
                     </view>
