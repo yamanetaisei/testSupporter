@@ -1,16 +1,20 @@
 PODS:
+  - CDAlertView (0.10.0)
   - Eureka (5.2.1)
 
 DEPENDENCIES:
+  - CDAlertView
   - Eureka
 
 SPEC REPOS:
   trunk:
+    - CDAlertView
     - Eureka
 
 SPEC CHECKSUMS:
+  CDAlertView: ee6a87c90c4283c8d316d55633db1a6981f1cc51
   Eureka: c883105488e05bc65539f583246ecf9657cabbfe
 
-PODFILE CHECKSUM: 6636d4599ec4a0a58be3171dad8dbed615cb957e
+PODFILE CHECKSUM: bc4965e22d117165bc90709f838ed2d108136b9d
 
 COCOAPODS: 1.8.4
