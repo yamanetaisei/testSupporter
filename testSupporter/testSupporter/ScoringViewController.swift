@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Eureka
-import CDAlertView
 
 class ScoringViewController: FormViewController{
     //入力された解答をココで受け取る
@@ -48,23 +47,12 @@ class ScoringViewController: FormViewController{
                 }
             }
     }
-    
-    override func viewDidLayoutSubviews() {
-        showAlert()
-    }
     func Aggregate(correct:Int,base:[String?]) -> Int {
         let correct = Double(correct)
         let base = Double(base.count)
         let score = correct/base*100
         let finalScore = Int(score)
         return finalScore
-    }
-    
-    func showAlert(){
-        let alert = CDAlertView(title: "Awesome Title", message: "Are you in?!", type: .success)
-        let doneAction = CDAlertViewAction(title: "Sure! 💪")
-        alert.add(action: doneAction)
-        alert.show()
     }
 }
 
