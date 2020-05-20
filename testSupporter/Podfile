@@ -6,5 +6,6 @@ target 'testSupporter' do
   use_frameworks!
 
   # Pods for testSupporter
+  pod "CDAlertView"
   pod 'Eureka'
 end
