@@ -61,8 +61,8 @@ class ScoringViewController: FormViewController{
     }
     
     func showAlert(){
-        let alert = CDAlertView(title: "Awesome Title", message: "Are you in?!", type: .success)
-        let doneAction = CDAlertViewAction(title: "Sure! 💪")
+        let alert = CDAlertView(title: "採点を行いましょう", message: "正解した問題に\nチェックマークをつけましょう", type: .success)
+        let doneAction = CDAlertViewAction(title: "OK!")
         alert.add(action: doneAction)
         alert.show()
     }
