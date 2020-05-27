@@ -26,6 +26,9 @@ class ScoringViewController: FormViewController{
                 listRow.title = answers
                 listRow.tag = "\(tagNumber)"
                 listRow.selectableValue = answers
+                if tagNumber%2 != 0 {
+                    listRow.baseCell.backgroundColor = UIColor(hex: "#F8F8FF")
+                }
                 listRow.onChange(){_ in
                     if listRow.value != nil {
                         self.countCorrect += 1
