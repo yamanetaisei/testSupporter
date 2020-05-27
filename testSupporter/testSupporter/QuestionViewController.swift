@@ -34,6 +34,9 @@ class QuestionViewController:FormViewController{
                         answer.showInsertIconInAddButton = false
                         $0.tag = "\(index)"
                         $0.placeholder = "問\(index + 1)"
+                        if index %  2 != 0{
+                            $0.baseCell.backgroundColor = UIColor(hex: "#F8F8FF")
+                        }
                     }
                 }
                 answer <<< TextRow() {
