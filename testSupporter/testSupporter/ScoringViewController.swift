@@ -23,8 +23,12 @@ class ScoringViewController: FormViewController{
         form +++ SelectableSection<ListCheckRow<String?>>("採点", selectionType: .multipleSelection)
         for answers in scoringAnswers{
             form.last! <<< ListCheckRow<String?>(answers){ listRow in
-                listRow.title = answers
                 listRow.tag = "\(tagNumber)"
+                if answers != nil{
+                    listRow.title = "問\(tagNumber + 1)　　" + answers!
+                }else{
+                    listRow.title = "問\(tagNumber + 1)"
+                }
                 listRow.selectableValue = answers
                 if tagNumber%2 != 0 {
                     listRow.baseCell.backgroundColor = UIColor(hex: "#F8F8FF")
