@@ -25,7 +25,13 @@ class ScoringViewController: FormViewController{
             form.last! <<< ListCheckRow<String?>(answers){ listRow in
                 listRow.tag = "\(tagNumber)"
                 if answers != nil{
-                    listRow.title = "問\(tagNumber + 1)　　" + answers!
+                    if tagNumber + 1 < 10{
+                        listRow.title = "問\(tagNumber + 1)    " + answers!
+                    }else if tagNumber + 1 >= 10 && tagNumber + 1 < 100  {
+                        listRow.title = "問\(tagNumber + 1)   " + answers!
+                    }else{
+                        listRow.title = "問\(tagNumber + 1)  " + answers!
+                    }
                 }else{
                     listRow.title = "問\(tagNumber + 1)"
                 }
