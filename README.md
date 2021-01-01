@@ -15,6 +15,10 @@
 - アプリ起動から問題演習までの、操作が少ないため、テンポよく学習が可能な点
 - 時間を気にせず、勉強ができるようにすること(時間計測機能の除外)
 
+## 使用ライブラリ
+[Eureka](https://github.com/xmartlabs/Eureka)
+[CDAlertView](https://github.com/candostdagdeviren/CDAlertView)
+
 ## 最後に
 
 このアプリが世に出回っていたら、普通自動車の本免試験は一回で済みました
