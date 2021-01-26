@@ -14,12 +14,5 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func goQuestion(_ sender: Any) {
-         let storyboard: UIStoryboard = self.storyboard!
-         let second = storyboard.instantiateViewController(withIdentifier: "question")
-         self.present(second, animated: true, completion: nil)
-    }
-    
 }
 
