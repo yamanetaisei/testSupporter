@@ -7,5 +7,4 @@ target 'testSupporter' do
 
   # Pods for testSupporter
   pod "CDAlertView"
-  pod 'Eureka'
 end
