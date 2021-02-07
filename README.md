@@ -14,7 +14,7 @@
 
 
 ## デモ
-動作画面は[ここ](https://drive.google.com/file/d/1LYNJANxr7I5_zpOoqGcEwgHWGk80eu0B/view?usp=sharing)
+詳しい動作画面は[ここ](https://drive.google.com/file/d/1LYNJANxr7I5_zpOoqGcEwgHWGk80eu0B/view?usp=sharing)
 
 ## 競合との差別化
 - アプリ起動から問題演習までの、操作が少ないため、テンポよく学習が可能な点
